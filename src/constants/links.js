@@ -37,13 +37,13 @@ export const CONTACT_EMAIL = 'support.campusconnectai@gmail.com'
 
 export const APP_DOWNLOAD_CONFIG = {
   /** URL to the APK file — local (public/downloads/) or external CDN */
-  apkUrl: '/downloads/campusconnect-ai.apk',
+  apkUrl: '/downloads/campusconnectAI.apk',
 
   /** Current app version */
   version: '1.0.0',
 
   /** APK file size (human-readable) */
-  fileSize: '96 MB',
+  fileSize: '100 MB',
 
   /** Minimum supported Android version */
   minAndroid: '8.0+',
