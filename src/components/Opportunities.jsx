@@ -192,13 +192,13 @@ export default function Opportunities() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button
-            onClick={() => setModalOpen(true)}
+          <a
+            href="#download"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-white gradient-bg shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-0.5"
           >
             Explore All Opportunities in App
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </a>
         </motion.div>
       </div>
 

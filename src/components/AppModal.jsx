@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Smartphone, ArrowRight, Sparkles } from 'lucide-react'
-import { GOOGLE_PLAY_STORE_URL } from '../constants/links'
 
 export default function AppModal({ isOpen, onClose, title = "Available in the App", message = "Download the CampusConnect AI mobile app to access this feature, connect with students, and discover real-time opportunities!" }) {
   if (!isOpen) return null
@@ -56,11 +55,11 @@ export default function AppModal({ isOpen, onClose, title = "Available in the Ap
           {/* Action Buttons */}
           <div className="space-y-3">
             <a
-              href={GOOGLE_PLAY_STORE_URL}
+              href="#download"
               onClick={onClose}
               className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl text-sm font-semibold text-white gradient-bg hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
             >
-              Get It on Google Play
+              Download the App
               <ArrowRight className="w-4 h-4" />
             </a>
 

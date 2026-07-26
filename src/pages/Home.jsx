@@ -11,7 +11,7 @@ import CommunityHub from '../components/CommunityHub'
 import HowItWorks from '../components/HowItWorks'
 import Ecosystem from '../components/Ecosystem'
 import About from '../components/About'
-import DownloadCTA from '../components/DownloadCTA'
+import DownloadSection from '../components/DownloadSection'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
         <HowItWorks />
         <Ecosystem />
         <About />
-        <DownloadCTA />
+        <DownloadSection />
       </main>
       <Footer />
     </div>
