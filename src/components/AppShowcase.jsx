@@ -56,7 +56,7 @@ const appScreenshots = [
 
 export default function AppShowcase() {
   return (
-    <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-0 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
@@ -74,11 +74,11 @@ export default function AppShowcase() {
             <Sparkles className="w-4 h-4 text-primary-500" />
             <span className="text-sm font-medium text-primary-600">Mobile Interface Showcase</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Built for the{' '}
             <span className="gradient-text">Modern Student</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Take a look inside the CampusConnect AI mobile app — designed for speed, clarity, and seamless student collaboration.
           </p>
         </motion.div>
@@ -139,11 +139,11 @@ export default function AppShowcase() {
                     <span>{item.subtitle}</span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-navy-500">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-navy-500 dark:text-white">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
                     {item.description}
                   </p>
 
@@ -154,7 +154,7 @@ export default function AppShowcase() {
                         <div className="w-5 h-5 rounded-full gradient-bg flex items-center justify-center text-white flex-shrink-0">
                           <CheckCircle2 className="w-3.5 h-3.5" />
                         </div>
-                        <span className="text-sm font-medium text-navy-500">{highlight}</span>
+                        <span className="text-sm font-medium text-navy-500 dark:text-white">{highlight}</span>
                       </div>
                     ))}
                   </div>

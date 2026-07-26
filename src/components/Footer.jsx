@@ -34,14 +34,14 @@ export default function Footer() {
               <img
                 src="/logo.jpg"
                 alt="CampusConnect AI Logo"
-                className="h-10 w-auto object-contain rounded-xl bg-white p-1"
+                className="h-10 w-auto object-contain rounded-xl bg-white dark:bg-slate-900 p-1"
               />
             </Link>
 
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
               "Your Campus. Your Community. Your Future."
             </p>
-            <p className="text-xs text-gray-500 max-w-sm">
+            <p className="text-xs text-gray-500 dark:text-gray-400 max-w-sm">
               Empowering university students with AI-powered career tools, project teammate discovery, skill roadmaps, and curated opportunities.
             </p>
 
@@ -159,7 +159,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 dark:text-gray-400 gap-4">
           <p>© 2026 CampusConnect AI. All rights reserved.</p>
           <p className="text-center sm:text-right">
             Designed for university students everywhere. Powered by AI.

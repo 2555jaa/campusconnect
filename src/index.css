@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-[#F8FAFC] text-navy-500 antialiased;
+    @apply bg-[#F8FAFC] dark:bg-[#0F172A] text-navy-500 dark:text-slate-100 antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
@@ -31,11 +31,11 @@
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-lg;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-gray-100/50 shadow-xl shadow-gray-900/5 rounded-2xl;
+    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-gray-100/50 dark:border-slate-700/50 shadow-xl shadow-gray-900/5 dark:shadow-none rounded-2xl;
   }
 
   .card-hover {

@@ -60,7 +60,7 @@ export default function CommunityHub() {
   }
 
   return (
-    <section id="community" className="relative py-20 lg:py-28 bg-white overflow-hidden">
+    <section id="community" className="relative py-20 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl" />
@@ -78,11 +78,11 @@ export default function CommunityHub() {
             <MessageCircle className="w-4 h-4 text-purple-600" />
             <span className="text-sm font-medium text-purple-600">Vibrant Student Network</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Your Community Is{' '}
             <span className="gradient-text">Your Advantage</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Share ideas, get peer feedback, discover project partners, and grow alongside thousands of ambitious students worldwide.
           </p>
         </motion.div>
@@ -121,7 +121,7 @@ export default function CommunityHub() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300"
+                className="p-6 rounded-2xl bg-white border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300"
               >
                 {/* Author Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -131,28 +131,28 @@ export default function CommunityHub() {
                     </div>
                     <div>
                       <div className="flex items-center gap-1.5">
-                        <h4 className="font-semibold text-navy-500 text-sm sm:text-base">{post.author}</h4>
+                        <h4 className="font-semibold text-navy-500 dark:text-white text-sm sm:text-base">{post.author}</h4>
                         <CheckCircle2 className="w-4 h-4 text-primary-500 fill-primary-50" />
                       </div>
                       <p className="text-xs text-gray-400">{post.role} • {post.time}</p>
                     </div>
                   </div>
 
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-50 text-gray-600 border border-gray-100">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-50 dark:bg-slate-800/50 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-slate-800">
                     {post.tag}
                   </span>
                 </div>
 
                 {/* Post Body */}
-                <h3 className="text-base sm:text-lg font-bold text-navy-500 mb-2 leading-snug">
+                <h3 className="text-base sm:text-lg font-bold text-navy-500 dark:text-white mb-2 leading-snug">
                   {post.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-5">
                   {post.content}
                 </p>
 
                 {/* Footer Controls */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-slate-800 text-xs text-gray-500 dark:text-gray-400">
                   <div className="flex items-center gap-6">
                     <button
                       onClick={() => toggleLike(post.id)}

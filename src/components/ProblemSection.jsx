@@ -34,11 +34,11 @@ export default function ProblemSection() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Students Have Potential.
             <span className="block gradient-text">They Just Need the Right Connection.</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Every student has the ability to succeed. They just need the right tools, guidance, and community to unlock their full potential.
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ export default function ProblemSection() {
                   className="flex items-center gap-3 p-4 rounded-xl bg-red-50/50 border border-red-100/50"
                 >
                   <div className="w-2 h-2 rounded-full bg-red-400 flex-shrink-0" />
-                  <span className="text-gray-600">{item}</span>
+                  <span className="text-gray-600 dark:text-gray-300">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function ProblemSection() {
                   <div className="w-6 h-6 rounded-full gradient-bg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-3.5 h-3.5 text-white" />
                   </div>
-                  <span className="text-navy-500 font-medium">{item}</span>
+                  <span className="text-navy-500 dark:text-white font-medium">{item}</span>
                 </motion.div>
               ))}
             </div>

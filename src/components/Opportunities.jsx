@@ -89,11 +89,11 @@ export default function Opportunities() {
             <Rocket className="w-4 h-4 text-cyan-600" />
             <span className="text-sm font-medium text-cyan-600">Career Launchpad</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Discover Opportunities That{' '}
             <span className="gradient-text">Move Your Career Forward</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Handpicked internships, scholarships, hackathons, and competitions curated specifically for ambitious university students.
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ export default function Opportunities() {
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
                   ? 'gradient-bg text-white shadow-md shadow-primary-500/20'
-                  : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                  : 'bg-white dark:bg-slate-900 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-slate-700 hover:border-gray-300 hover:bg-gray-50 dark:bg-slate-800/50'
               }`}
             >
               {category}
@@ -132,7 +132,7 @@ export default function Opportunities() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ y: -6 }}
-                className="group relative flex flex-col justify-between p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300"
+                className="group relative flex flex-col justify-between p-6 rounded-2xl bg-white border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300"
               >
                 <div>
                   {/* Category Pill */}
@@ -145,13 +145,13 @@ export default function Opportunities() {
                   </div>
 
                   {/* Title & Company */}
-                  <h3 className="text-lg font-bold text-navy-500 group-hover:text-primary-600 transition-colors duration-200 mb-1">
+                  <h3 className="text-lg font-bold text-navy-500 dark:text-white group-hover:text-primary-600 transition-colors duration-200 mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-sm font-medium text-gray-500 mb-4">{item.company}</p>
+                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">{item.company}</p>
 
                   {/* Metadata */}
-                  <div className="space-y-2 mb-6 text-xs text-gray-500">
+                  <div className="space-y-2 mb-6 text-xs text-gray-500 dark:text-gray-400">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
                       <span>{item.location}</span>
@@ -165,7 +165,7 @@ export default function Opportunities() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-6">
                     {item.tags.map((tag) => (
-                      <span key={tag} className="px-2.5 py-1 rounded-md bg-gray-50 text-gray-600 text-[11px] font-medium border border-gray-100">
+                      <span key={tag} className="px-2.5 py-1 rounded-md bg-gray-50 dark:bg-slate-800/50 text-gray-600 dark:text-gray-300 text-[11px] font-medium border border-gray-100 dark:border-slate-800">
                         {tag}
                       </span>
                     ))}

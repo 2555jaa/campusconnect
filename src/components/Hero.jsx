@@ -43,19 +43,19 @@ export default function Hero() {
             </motion.div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy-500 leading-tight mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy-500 dark:text-white leading-tight mb-6 tracking-tight">
               <span className="block">Your Campus.</span>
               <span className="block">Your Community.</span>
               <span className="block gradient-text">Your Future.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-4 max-w-xl font-medium">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 max-w-xl font-medium">
               Everything students need to connect, grow, collaborate, and build their future — powered by AI.
             </p>
 
             {/* Description */}
-            <p className="text-base text-gray-500 leading-relaxed mb-8 max-w-xl">
+            <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-xl">
               CampusConnect AI helps university students discover opportunities, build career-ready skills, create professional resumes, find project teammates, and connect with a community that helps them grow.
             </p>
 
@@ -74,7 +74,7 @@ export default function Hero() {
                 href="#features"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-navy-500 bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-navy-500 dark:text-white bg-white border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300"
               >
                 Explore Features
                 <ArrowRight className="w-5 h-5" />
@@ -86,19 +86,19 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-wrap items-center gap-8 mt-12 pt-8 border-t border-gray-100"
+              className="flex flex-wrap items-center gap-8 mt-12 pt-8 border-t border-gray-100 dark:border-slate-800"
             >
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500">100%</div>
-                <div className="text-xs sm:text-sm text-gray-500">Student Focused</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500 dark:text-white">100%</div>
+                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Student Focused</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500">Skill Hub</div>
-                <div className="text-xs sm:text-sm text-gray-500">Learning Tracks</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500 dark:text-white">Skill Hub</div>
+                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Learning Tracks</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500">Smart</div>
-                <div className="text-xs sm:text-sm text-gray-500">Team Matching</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-navy-500 dark:text-white">Smart</div>
+                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Team Matching</div>
               </div>
             </motion.div>
           </motion.div>
@@ -117,13 +117,13 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 + item.delay * 0.2, duration: 0.5 }}
-                className="absolute hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-100 shadow-xl shadow-gray-900/10 z-20 hover:scale-105 transition-transform"
+                className="absolute hidden xl:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-gray-100 dark:border-slate-800 shadow-xl shadow-gray-900/10 z-20 hover:scale-105 transition-transform"
                 style={{ left: item.x, top: item.y }}
               >
                 <div className="w-7 h-7 rounded-lg gradient-bg flex items-center justify-center text-white">
                   <item.icon className="w-4 h-4" />
                 </div>
-                <span className="text-xs font-semibold text-navy-500 whitespace-nowrap">{item.text}</span>
+                <span className="text-xs font-semibold text-navy-500 dark:text-white whitespace-nowrap">{item.text}</span>
               </motion.div>
             ))}
 

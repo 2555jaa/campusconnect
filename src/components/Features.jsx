@@ -51,11 +51,11 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Everything You Need to{' '}
             <span className="gradient-text">Move Forward</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             From AI-powered career guidance to community connections, CampusConnect AI gives students everything they need to succeed.
           </p>
         </motion.div>

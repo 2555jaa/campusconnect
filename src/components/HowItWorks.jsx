@@ -38,7 +38,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-20 lg:py-28 bg-white overflow-hidden">
+    <section id="how-it-works" className="relative py-20 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary-500/5 to-transparent" />
       </div>
@@ -54,11 +54,11 @@ export default function HowItWorks() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 border border-primary-100 mb-4">
             <span className="text-sm font-medium text-primary-600">Simple 4-Step Journey</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             How CampusConnect AI{' '}
             <span className="gradient-text">Works</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             From creating your profile to landing your dream opportunity, we make your campus journey structured and seamless.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="relative z-10 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300 group"
+                className="relative z-10 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300 group"
               >
                 <div>
                   {/* Top Step Pill & Number */}
@@ -91,12 +91,12 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-navy-500 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-navy-500 dark:text-white mb-3 group-hover:text-primary-600 transition-colors duration-200">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                     {item.description}
                   </p>
                 </div>

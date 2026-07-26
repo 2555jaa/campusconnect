@@ -22,12 +22,12 @@ export default function AppModal({ isOpen, onClose, title = "Available in the Ap
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.2 }}
-          className="relative w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100 z-10 text-center"
+          className="relative w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100 dark:border-slate-800 z-10 text-center"
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full text-gray-400 hover:text-navy-500 hover:bg-gray-100 transition-colors"
+            className="absolute top-4 right-4 p-2 rounded-full text-gray-400 hover:text-navy-500 dark:text-white hover:bg-gray-100 dark:bg-slate-800 transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -39,10 +39,10 @@ export default function AppModal({ isOpen, onClose, title = "Available in the Ap
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-navy-500 mb-2">{title}</h3>
+          <h3 className="text-xl font-bold text-navy-500 dark:text-white mb-2">{title}</h3>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 leading-relaxed mb-6">
+          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
             {message}
           </p>
 
@@ -65,7 +65,7 @@ export default function AppModal({ isOpen, onClose, title = "Available in the Ap
 
             <button
               onClick={onClose}
-              className="w-full px-6 py-2.5 rounded-xl text-xs font-medium text-gray-500 hover:text-navy-500 transition-colors"
+              className="w-full px-6 py-2.5 rounded-xl text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-navy-500 dark:text-white transition-colors"
             >
               Close Showcase Preview
             </button>

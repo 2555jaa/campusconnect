@@ -11,7 +11,7 @@ const items = [
 
 export default function TrustStrip() {
   return (
-    <section className="relative py-10 bg-white border-y border-gray-100">
+    <section className="relative py-10 bg-white border-y border-gray-100 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
           {items.map((item, index) => (
@@ -26,7 +26,7 @@ export default function TrustStrip() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-50 to-purple-50 flex items-center justify-center group-hover:from-primary-100 group-hover:to-purple-100 transition-colors duration-300">
                 <item.icon className="w-5 h-5 text-primary-500" />
               </div>
-              <span className="text-sm font-medium text-gray-600 text-center group-hover:text-navy-500 transition-colors duration-300">
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300 text-center group-hover:text-navy-500 dark:text-white transition-colors duration-300">
                 {item.label}
               </span>
             </motion.div>

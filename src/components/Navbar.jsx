@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Download, ChevronDown } from 'lucide-react'
+import { Menu, X, Download, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
 
 const navLinks = [
   { name: 'Home', href: '#hero' },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState('')
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const { isDark, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +73,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-100/50 shadow-sm'
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-100/50 dark:border-slate-800 shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -95,8 +97,8 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeLink === link.name
-                    ? 'text-primary-500 bg-primary-50'
-                    : 'text-gray-600 hover:text-navy-500 hover:bg-gray-50'
+                    ? 'text-primary-500 bg-primary-50 dark:bg-primary-500/10'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-navy-500 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800'
                 }`}
               >
                 {link.name}
@@ -104,8 +106,15 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA & Theme Toggle */}
           <div className="hidden lg:flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="p-2.5 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <a
               href="#download"
               onClick={(e) => {
@@ -121,14 +130,23 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-600 hover:text-navy-500 hover:bg-gray-100 transition-colors"
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Theme Toggle & Menu Button */}
+          <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-navy-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -140,7 +158,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-gray-100 overflow-hidden"
+            className="lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-gray-100 dark:border-slate-800 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -151,7 +169,7 @@ export default function Navbar() {
                     e.preventDefault()
                     handleMobileNavClick(link.href)
                   }}
-                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-navy-500 hover:bg-gray-50 transition-colors"
+                  className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-navy-500 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
                 >
                   {link.name}
                 </a>

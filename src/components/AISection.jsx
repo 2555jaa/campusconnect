@@ -24,11 +24,11 @@ export default function AISection() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
             Meet Your{' '}
             <span className="gradient-text">AI Career Companion</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Get intelligent career guidance tailored to your skills, interests, and goals — powered by advanced AI.
           </p>
         </motion.div>
@@ -40,14 +40,14 @@ export default function AISection() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto mb-16"
         >
-          <div className="rounded-2xl bg-white border border-gray-100 shadow-xl shadow-purple-500/5 overflow-hidden glow-ai">
+          <div className="rounded-2xl bg-white border border-gray-100 dark:border-slate-800 shadow-xl shadow-purple-500/5 overflow-hidden glow-ai">
             {/* Chat Header */}
-            <div className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-b border-gray-100 dark:border-slate-800">
               <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="font-semibold text-navy-500 text-sm">AI Career Assistant</h4>
+                <h4 className="font-semibold text-navy-500 dark:text-white text-sm">AI Career Assistant</h4>
                 <p className="text-xs text-gray-400">Online • Ready to help</p>
               </div>
             </div>
@@ -56,8 +56,8 @@ export default function AISection() {
             <div className="p-6 space-y-4">
               {/* Student Message */}
               <div className="flex justify-start">
-                <div className="max-w-[80%] bg-gray-50 rounded-2xl rounded-tl-sm px-4 py-3 border border-gray-100">
-                  <p className="text-sm text-navy-500">
+                <div className="max-w-[80%] bg-gray-50 dark:bg-slate-800/50 rounded-2xl rounded-tl-sm px-4 py-3 border border-gray-100 dark:border-slate-800">
+                  <p className="text-sm text-navy-500 dark:text-white">
                     What career path should I follow as a software engineering student?
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function AISection() {
               {/* AI Message */}
               <div className="flex justify-end">
                 <div className="max-w-[85%] bg-gradient-to-r from-purple-500/5 to-primary-500/5 rounded-2xl rounded-tr-sm px-4 py-3 border border-purple-100/50">
-                  <p className="text-sm text-navy-500 mb-3">
+                  <p className="text-sm text-navy-500 dark:text-white mb-3">
                     Based on your interests and skills, here are three career paths you can explore:
                   </p>
 
@@ -75,14 +75,14 @@ export default function AISection() {
                     {careerPaths.map((path, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-3 p-2.5 rounded-xl bg-white/80 border border-gray-100 hover:border-purple-100 transition-colors"
+                        className="flex items-center gap-3 p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-gray-100 dark:border-slate-800 hover:border-purple-100 transition-colors"
                       >
                         <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${path.color} flex items-center justify-center`}>
                           <path.icon className="w-4 h-4 text-white" />
                         </div>
                         <div>
-                          <p className="text-xs font-semibold text-navy-500">{path.title}</p>
-                          <p className="text-[10px] text-gray-500">{path.description}</p>
+                          <p className="text-xs font-semibold text-navy-500 dark:text-white">{path.title}</p>
+                          <p className="text-[10px] text-gray-500 dark:text-gray-400">{path.description}</p>
                         </div>
                       </div>
                     ))}
@@ -92,7 +92,7 @@ export default function AISection() {
 
               {/* Typing Indicator */}
               <div className="flex justify-start">
-                <div className="flex items-center gap-1.5 px-4 py-2.5 bg-gray-50 rounded-2xl border border-gray-100">
+                <div className="flex items-center gap-1.5 px-4 py-2.5 bg-gray-50 dark:bg-slate-800/50 rounded-2xl border border-gray-100 dark:border-slate-800">
                   <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce" style={{ animationDelay: '0ms' }} />
                   <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce" style={{ animationDelay: '150ms' }} />
                   <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce" style={{ animationDelay: '300ms' }} />

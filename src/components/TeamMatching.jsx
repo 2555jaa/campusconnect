@@ -15,7 +15,7 @@ const matchingStudents = [
 
 export default function TeamMatching() {
   return (
-    <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
@@ -29,11 +29,11 @@ export default function TeamMatching() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6">
               Don't Build Alone.{' '}
               <span className="gradient-text">Find Your Team.</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
               Connect with teammates who share your interests, complement your skills, and help you build something amazing. Our smart matching system considers skills, project needs, and career goals.
             </p>
 
@@ -50,7 +50,7 @@ export default function TeamMatching() {
                   <div className="w-5 h-5 rounded-full gradient-bg flex items-center justify-center">
                     <Star className="w-3 h-3 text-white" />
                   </div>
-                  <span className="text-gray-600">{item}</span>
+                  <span className="text-gray-600 dark:text-gray-300">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -78,24 +78,24 @@ export default function TeamMatching() {
                   <Code className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-navy-500">Smart Campus App</h4>
-                  <p className="text-sm text-gray-500">Looking for teammates</p>
+                  <h4 className="font-semibold text-navy-500 dark:text-white">Smart Campus App</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Looking for teammates</p>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Roles Needed</p>
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Roles Needed</p>
                 {projectRoles.map((role, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-3 rounded-xl bg-white/80 border border-gray-100"
+                    className="flex items-center justify-between p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-gray-100 dark:border-slate-800"
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${role.color} flex items-center justify-center`}>
                         <role.icon className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-navy-500">{role.title}</p>
+                        <p className="text-sm font-medium text-navy-500 dark:text-white">{role.title}</p>
                         <p className="text-xs text-gray-400">{role.applicants} applicants</p>
                       </div>
                     </div>
@@ -109,7 +109,7 @@ export default function TeamMatching() {
 
             {/* Matching Students */}
             <div className="space-y-3">
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Top Matches</p>
+              <p className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Top Matches</p>
               {matchingStudents.map((student, index) => (
                 <motion.div
                   key={index}
@@ -117,14 +117,14 @@ export default function TeamMatching() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center justify-between p-3 rounded-xl bg-white border border-gray-100 hover:border-primary-100 transition-colors"
+                  className="flex items-center justify-between p-3 rounded-xl bg-white border border-gray-100 dark:border-slate-800 hover:border-primary-100 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${student.color} flex items-center justify-center text-white font-semibold text-sm`}>
                       {student.avatar}
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-navy-500">{student.name}</p>
+                      <p className="text-sm font-medium text-navy-500 dark:text-white">{student.name}</p>
                       <p className="text-xs text-gray-400">{student.skill}</p>
                     </div>
                   </div>

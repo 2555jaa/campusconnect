@@ -60,11 +60,11 @@ export default function Ecosystem() {
             <Sparkles className="w-4 h-4 text-primary-500" />
             <span className="text-sm font-medium text-primary-600">The CampusConnect AI Advantage</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-500 dark:text-white mb-6 leading-tight">
             More Than an App.{' '}
             <span className="block gradient-text">A Complete Student Ecosystem.</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             We bring together everything students need to transform learning into real-world career achievement.
           </p>
         </motion.div>
@@ -91,11 +91,11 @@ export default function Ecosystem() {
                     <Icon className="w-7 h-7" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-navy-500 mb-3">
+                  <h3 className="text-xl font-bold text-navy-500 dark:text-white mb-3">
                     {pillar.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
