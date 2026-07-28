@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl" />
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
       </div>
@@ -140,7 +140,7 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-navy-900 ring-1 ring-white/10" />
                   <div className="w-2 h-2 rounded-full bg-navy-900" />
                 </div>
-                
+
                 {/* Real App Screenshot Image */}
                 <div className="relative rounded-[2.4rem] overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
                   <img

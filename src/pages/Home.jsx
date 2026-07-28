@@ -14,9 +14,15 @@ import About from '../components/About'
 import DownloadSection from '../components/DownloadSection'
 import Footer from '../components/Footer'
 
+import { Helmet } from 'react-helmet-async'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-navy-500 font-sans selection:bg-primary-500/20 selection:text-primary-700">
+      <Helmet>
+        <title>CampusConnect AI - AI-Powered Student Career & Networking Hub</title>
+        <meta name="description" content="Download CampusConnect AI for AI career guidance, 90-day roadmaps, hackathon matching, and student networking." />
+      </Helmet>
       <Navbar />
       <main>
         <Hero />

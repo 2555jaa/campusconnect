@@ -24,7 +24,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
-      
+
       if (isHome) {
         const sections = navLinks.map(link => ({
           name: link.name,
@@ -71,11 +71,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-100/50 dark:border-slate-800 shadow-sm'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -95,11 +94,10 @@ export default function Navbar() {
                 key={link.name}
                 href={isHome ? link.href : '/'}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  activeLink === link.name
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${activeLink === link.name
                     ? 'text-primary-500 bg-primary-50 dark:bg-primary-500/10'
                     : 'text-gray-600 dark:text-gray-300 hover:text-navy-500 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800'
-                }`}
+                  }`}
               >
                 {link.name}
               </a>
